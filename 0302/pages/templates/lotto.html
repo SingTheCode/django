@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>로또 당첨 횟수를 알아보자.</h1>
+    <hr />
+    <h2>이번 회차 당첨 번호 : {{lottoNumbers}} + {{bnusNo}}</h2>
+    <ul>
+      {% for count in counts %} {% if forloop.first %} {% else %}
+      <li>{{forloop.counter0}}등 : {{count}}번</li>
+      {% endif %} {% endfor %}
+      <li>꽝 : {{counts.0}}번</li>
+    </ul>
+    <br />
+    <h1>제 1004회 로또 번호 추천</h1>
+    SSAFY님께서 선택하신 로또 번호는 {{recommendList}}입니다.
+  </body>
+</html>

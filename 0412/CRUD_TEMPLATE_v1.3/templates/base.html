@@ -14,10 +14,10 @@
     <div class="container">
       {% if request.user.is_authenticated %}
         <h3>Hello,
-          {{request.user}}</h3>
-        <form action="{% url 'accounts:logout' %}" methods="POST">
+          {{ request.user }}</h3>
+        <form action="{% url 'accounts:logout'%}" method="POST">
           {% csrf_token %}
-          <input type="submit" value='Logout'>
+          <input type="submit" value="Logout">
         </form>
       {% else %}
         <a href="{% url 'accounts:login' %}">[로그인]</a>
